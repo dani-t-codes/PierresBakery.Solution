@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Bread;
+using Bread.Models;
 
 namespace Bread.Tests
 {
