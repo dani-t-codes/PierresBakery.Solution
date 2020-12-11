@@ -72,10 +72,10 @@ Commands necessary for running this console application and its tests will be fo
 #### Opening the Project on your Local System
 Once the project has been cloned to your computer and you have all the necessary items on your local computer, open the project in the application of your choice ((Visual Code Studio)[https://code.visualstudio.com/] was used and is recommended by the application builder), and run the following...
 
-* Navigate to the project folder on your Terminal or CMD.
-* Inside the main project folder, `dotnet build` will get bin/ and obj/ folders downloaded for the program to run.
-* Move to the .Tests subfolder. Running `dotnet restore` will install other necessary packages listed in project's boilerplate. 
-* `dotnet test` will allow you to run the test-driven-development tests for the project's Models, if you are in the .Tests subfolder. 
+* Navigate to the project folder, PierresBakery.Solutions, on your Terminal or CMD.
+* Move to the PierresBakery subfolder, and `dotnet build` will get bin/ and obj/ folders downloaded for the program to run.
+* Move to the PierresBakery.Tests subfolder. Running `dotnet restore` will install other necessary packages listed in project's boilerplate. 
+* When in the PierresBakery.Tests subfolder, `dotnet test` will allow you to run the test-driven-development tests for the project's Models. 
 * In the main project folder, `dotnet run` will run the application in the console. 
 
 
