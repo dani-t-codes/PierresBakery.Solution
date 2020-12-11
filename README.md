@@ -83,8 +83,11 @@ Once the project has been cloned to your computer and you have all the necessary
 
 | Spec                                            | Input                        | Output                        |
 | :---------------------------------------------- | :--------------------------- | :----------------------------|
-| **Takes user entry and turns string into array**    | User enters: palindrome | Return: ["palindrome"] |
-
+| **User begins program, Console logs welcome message & daily specials** | User enters: `dotnet run` | Return: "Welcome Message & Pricing" |
+| **User Chooses Bread Items to Purchase** | User enters: (Bread/Pastries) | Return: 4 bread loaves |
+| **Console logs Cost of Bread Items** | User enters: 4 bread loaves | Output: "Bread Cost: $15" |
+| **User Chooses Pastry Items to Purchase** | User enters: (Bread/Pastries) | Return: 3 pastries |
+| **Console logs cost of Bread Items** | User enters: 4 bread loaves | Output: "Pastry Cost: $5" |
 
 
 ### Tests
