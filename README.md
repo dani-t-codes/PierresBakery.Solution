@@ -19,13 +19,19 @@ Pierre offers the following deals:
 
 All functionality for the models is tested.
 
-## Technologies used
+## Technologies Used
 
+- Git
 - C# v 7.3
 - .NET Core v 2.2
 - dotnet script, REPL
 
 ## Installation Requirements
+
+This project requires the technologies listed in the above 'Technologies Used' section. If you need to acquire any of the above technologies to access this project, please follow the instructions included below.
+
+Commands necessary for running this console application and its tests will be found at the bottom of the instructions list. 
+
 
 #### Installing Git
 ###### For Mac Users
@@ -68,9 +74,9 @@ Once the project has been cloned to your computer and you have all the necessary
 
 * Navigate to the project folder on your Terminal or CMD.
 * Inside the main project folder, `dotnet build` will get bin/ and obj/ folders downloaded for the program to run.
-* While you are in the .Tests subfolder, running `dotnet restore` will install necessary packages listed in project's boilerplate. 
-* `dotnet test` will allow you to run the test-drive-development test for the project's Models, if you are in the .Tests subfolder. 
-* `dotnet run` will run the application in the console. 
+* Move to the .Tests subfolder. Running `dotnet restore` will install other necessary packages listed in project's boilerplate. 
+* `dotnet test` will allow you to run the test-driven-development tests for the project's Models, if you are in the .Tests subfolder. 
+* In the main project folder, `dotnet run` will run the application in the console. 
 
 
 ### Specs
