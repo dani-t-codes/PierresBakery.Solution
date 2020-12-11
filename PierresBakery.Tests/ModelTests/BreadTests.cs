@@ -14,6 +14,12 @@ namespace PierresBakery.Tests
       Bread testBread = new Bread();
       Assert.AreEqual(true, testBread.TotBreadLoaves(6));
     }
+    [TestMethod]
+    public void TotBreadLoaves_NumberNotDivisibleByThree_False()
+    {
+      Bread testBread = new Bread();
+      Assert.AreEqual(false, testBread.TotBreadLoaves(8));
+    }
     // [TestMethod]
     // public void TotBreadLoaves_TotalReturnsDiscountPriceForThree_TODO()
     // {
