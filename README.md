@@ -12,12 +12,10 @@ This project is a C# console application made for a bakery and includes the foll
 - When the user runs the application, they receive a prompt with a welcome message, along with the cost for both Bread and Pastry.
 - A user can specify how many loaves of Bread and how many Pastries they'd like.
 - The total cost of the order is returned to the user.
-
-Pierre offers the following deals:
-  - Bread: Buy 2, get 1 free. A single loaf costs $5.
-  - Pastry: Buy 1 for \$2 or 3 for $5.
-
-All functionality for the models is tested.
+  Pierre offers the following deals:
+    - Bread: Buy 2, get 1 free. A single loaf costs $5.
+    - Pastry: Buy 1 for \$2 or 3 for $5.
+- All functionality for the models is tested.
 
 ## Technologies Used
 
@@ -30,7 +28,7 @@ All functionality for the models is tested.
 
 This project requires the technologies listed in the above 'Technologies Used' section. If you need to acquire any of the above technologies to access this project, please follow the instructions included below.
 
-Commands necessary for running this console application and its tests will be found at the bottom of the instructions list. 
+If you already have the necessary technologies on your local system, the commands necessary for running this console application and its tests will be found at the bottom of the instructions list. 
 
 
 #### Installing Git
@@ -72,7 +70,7 @@ Commands necessary for running this console application and its tests will be fo
 #### Opening the Project on your Local System
 Once the project has been cloned to your computer and you have all the necessary items on your local computer, open the project in the application of your choice ((Visual Code Studio)[https://code.visualstudio.com/] was used and is recommended by the application builder), and run the following...
 
-* Navigate to the project folder, PierresBakery.Solutions, on your Terminal or CMD.
+* Navigate to the project folder, PierresBakery.Solution, on your Terminal or CMD.
 * Move to the PierresBakery subfolder, and `dotnet build` will get bin/ and obj/ folders downloaded for the program to run.
 * Move to the PierresBakery.Tests subfolder. Running `dotnet restore` will install other necessary packages listed in project's boilerplate. 
 * When in the PierresBakery.Tests subfolder, `dotnet test` will allow you to run the test-driven-development tests for the project's Models. 
@@ -85,9 +83,9 @@ Once the project has been cloned to your computer and you have all the necessary
 | :---------------------------------------------- | :--------------------------- | :----------------------------|
 | **User begins program, Console logs welcome message & daily specials** | User enters: `dotnet run` | Return: "Welcome Message & Pricing" |
 | **User Chooses Bread Items to Purchase** | User enters: (Bread/Pastries) | Return: 4 bread loaves |
-| **Console logs Cost of Bread Items** | User enters: 4 bread loaves | Output: "Bread Cost: $15" |
+| **Console logs Cost of Chosen Bread Items** | User enters: 4 bread loaves | Output: "Bread Cost: $15" |
 | **User Chooses Pastry Items to Purchase** | User enters: (Bread/Pastries) | Return: 3 pastries |
-| **Console logs cost of Bread Items** | User enters: 4 bread loaves | Output: "Pastry Cost: $5" |
+| **Console logs cost of Chosen Bread Items** | User enters: 4 bread loaves | Output: "Pastry Cost: $5" |
 
 
 ### Tests
