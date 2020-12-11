@@ -48,14 +48,14 @@ public class Program
             return Program.Main(); // (stretch - go to beginning of loop)
           }
     }
-    else if (response == "exit");
+    else if (response == "exit")
     {
       Console.WriteLine("Come again soon! Goodbye!");
     }
-    // else
-    // {
-    //   Console.WriteLine("I'm not sure what you mean. Please try again.");
-    //   Program.Main();
-    // }
+    else
+    {
+      Console.WriteLine("I'm not sure what you mean. Please try again.");
+      Program.Main();
+    }
   }
 }
