@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using Models;
 
-namespace Bread
+namespace PierresBakery.Models
 {
   public class Bread
   {
