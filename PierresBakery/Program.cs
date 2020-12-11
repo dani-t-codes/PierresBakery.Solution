@@ -1,6 +1,7 @@
-using System;
 using System.Collections.Generic;
+using System.Threading;
 using Bread.Models;
+using System;
 
 public class Program
 {
@@ -14,8 +15,6 @@ public class Program
     Console.WriteLine("What would you like to purchase today (Bread/Pastries/Exit)");
     string response = Console.ReadLine().ToLower();
 
-
-  // private class Bread()
     if (response == "bread") 
     {
       Console.WriteLine("How many loaves of bread would you like to purchase?");
