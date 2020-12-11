@@ -25,12 +25,12 @@ namespace PierresBakery
   {
     public bool TotPastries(int numOfPastries)
     {
-      // if (numOfPastries % 3 == 0)
-      // {
-      //   return true;
-      // }
-      // else 
-      // {
+      if (numOfPastries % 3 == 0)
+      {
+        return true;
+      }
+      else 
+      {
         return false;
       }
     }
@@ -40,3 +40,4 @@ namespace PierresBakery
     //3rd loaf costs $1 - if pastryNum % 3 == 0, totCost = $5 * (pastryNum / 3)
     //else totPastryCost = pastryNum * 2
   }
+}
