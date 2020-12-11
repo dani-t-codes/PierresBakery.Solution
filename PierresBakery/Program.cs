@@ -18,9 +18,10 @@ public class Program
 
     if (response == "bread") 
     {
-      Console.WriteLine("How many loaves of bread would you like to purchase?");
-      int breadLoaves = Console.ReadLine();
-      // Console.WriteLine("Is this the correct number of bread loaves?"(Yes/No));  // stretch
+      Console.WriteLine("How many loaves of bread would you like to purchase? (e.g. 2)");
+      int breadLoaves = Console.ReadLine().ToInt();
+      // create if/ else for numbers vs anything else
+      // Console.WriteLine("Is this the correct number of bread loaves?"(Yes/No));  // stretch 
       Console.WriteLine(breadLoaves * cost);
       // string confirmNumLoaves = Console.ReadLine().ToLower();  // stretch
       //   if (confirmNumLoaves == "yes")
@@ -34,8 +35,9 @@ public class Program
     }
     else if (response == "pastries")
     {
-      Console.WriteLine("How many pastries would you like to purchase?");
-      int pastries = Console.ReadLine();  // (stretch - accept num value OR words translated to num)
+      Console.WriteLine("How many pastries would you like to purchase? (e.g. 2)");
+      int pastries = Console.ReadLine().ToInt();  // (stretch - accept num value OR words translated to num) 
+      // create if/ else for numbers vs anything else
       // Console.WriteLine("Is this the correct number of pastries?"(Yes/No)); //stretch
       Console.WriteLine(breadLoaves * cost);
     //   string confirmNumPastries = Console.ReadLine().ToLower();  //stretch
