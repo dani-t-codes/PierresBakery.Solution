@@ -25,7 +25,7 @@ public class Program
       string confirmNumLoaves = Console.ReadLine().ToLower();
         if (confirmNumLoaves == "yes")
         {
-          return costLoaves;
+          return costLoaves; // TODO
         }
         else
         {
@@ -34,11 +34,28 @@ public class Program
     }
     else if (response == "pastries")
     {
-
+      Console.WriteLine("How many pastries would you like to purchase?");
+      int pastries = Console.ReadLine();  // (stretch - accept num value OR words translated to num)
+      Console.WriteLine("Is this the correct number of pastries?"(Yes/No));
+      Console.WriteLine(breadLoaves);
+      string confirmNumPastries = Console.ReadLine().ToLower();
+        if (confirmNumPastries == "yes")
+          {
+            return costPastries; // TODO
+          }
+        else
+          {
+            return Program.Main(); // (stretch - go to beginning of loop)
+          }
     }
-    else (response == "exit");
+    else if (response == "exit");
     {
-
+      Console.WriteLine("Come again soon! Goodbye!");
     }
+    // else
+    // {
+    //   Console.WriteLine("I'm not sure what you mean. Please try again.");
+    //   Program.Main();
+    // }
   }
 }
