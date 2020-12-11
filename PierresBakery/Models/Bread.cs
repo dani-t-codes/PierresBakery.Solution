@@ -8,7 +8,9 @@ namespace PierresBakery
     {
       if (numOfLoaves % 3 == 0)
       {
-        return true;
+        //return cost
+        // int totBreadCost = 10 * (numOfLoaves / 3);
+        return numOfLoaves % 3 == 0; //totBreadCost;
       }
       else 
       {
