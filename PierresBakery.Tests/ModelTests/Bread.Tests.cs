@@ -7,9 +7,19 @@ namespace Bread.Tests
   public class Bread_Tests
   {
     [TestMethod]
-    public void Test_Name()
+    public void BreadCost_NumberDivisibleByThree_True()
     {
       //testing code will go here
+    }
+  }
+
+  [TestClass]
+  public class Pastry_Tests
+  {
+    [TestMethod]
+    public void PastryCost_NumberDivisibleByThree_True()
+    {
+      //testing code here
     }
   }
 }
