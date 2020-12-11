@@ -1,9 +1,14 @@
 using System.Collections.Generic;
+using Models;
 
-namespace Bread.Models
+namespace Bread
 {
   public class Bread
   {
+    public bool TotBreadLoaves(int numOfLoaves)
+    {
+      return false;
+    }
     //Buy 2, get 1 free.
     //3rd loaf is 0 dollars - if breadLoaves % 3 == 0, totBreadCost = 10  * (breadLoaves / 3)
     // else totBreadCost = breadLoaves * 5

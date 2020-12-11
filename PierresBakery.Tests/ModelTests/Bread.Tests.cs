@@ -1,15 +1,17 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Bread.Models;
+using Bread;
+using Models;
 
 namespace Bread.Tests
 {
   [TestClass]
-  public class Bread_Tests
+  public class BreadTests
   {
     [TestMethod]
-    public void BreadCost_NumberDivisibleByThree_True()
+    public void TotBreadLoaves_NumberDivisibleByThree_True()
     {
-      //testing code will go here
+      TotBreadLoaves testBreadLoaves = new TotBreadLoaves();
+      Assert.AreEqual(true, testTotBreadLoaves.TotBreadLoaves(6));
     }
   }
 
