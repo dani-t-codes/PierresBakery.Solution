@@ -6,14 +6,14 @@ namespace PierresBakery
   {
     public bool TotBreadLoaves(int numOfLoaves)
     {
-      // if (numOfLoaves % 3 == 0)
-      // {
-      //   return true;
-      // }
-      // else 
-      // {
+      if (numOfLoaves % 3 == 0)
+      {
+        return true;
+      }
+      else 
+      {
         return false;
-      // }
+      }
     }
     //Buy 2, get 1 free.
     //3rd loaf is 0 dollars - if breadLoaves % 3 == 0, totBreadCost = 10  * (breadLoaves / 3)
