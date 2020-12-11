@@ -17,12 +17,13 @@ namespace PierresBakery.Tests
   }
 
   [TestClass]
-  public class Pastry_Tests
+  public class PastryTests
   {
     [TestMethod]
-    public void PastryCost_NumberDivisibleByThree_True()
+    public void TotPastries_NumberDivisibleByThree_True()
     {
-      //testing code here
+      Pastry testPastry = new Pastry();
+      Assert.AreEqual(true, testPastry.TotPastries(9));
     }
   }
 }
