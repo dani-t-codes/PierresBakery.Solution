@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-using PierresBakery.Models;
-using System;
+// using System.Collections.Generic;
+using PierresBakery;
+// using System;
 
 namespace PierresBakery.Tests
 {
@@ -11,8 +11,8 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void TotBreadLoaves_NumberDivisibleByThree_True()
     {
-      TotBreadLoaves testBreadLoaves = new TotBreadLoaves();
-      Assert.AreEqual(true, testTotBreadLoaves.TotBreadLoaves(6));
+      Bread testBread = new Bread();
+      Assert.AreEqual(true, testBread.TotBreadLoaves(6));
     }
   }
 
