@@ -22,7 +22,7 @@ namespace PierresBakery
       {
         return 10;
       }
-      else 
+      else
       {
         return 0; 
       }
@@ -41,24 +41,16 @@ namespace PierresBakery
       }
       else if (numOfPastries > 3 && numOfPastries % 3 != 0)
       {
-        return (2 * numOfPastries) - ((numOfPastries % 3)); 
+        return (2 * numOfPastries) - ((numOfPastries % 3));
       }
       else if (numOfPastries % 3 == 0)
       {
         return 5 * (numOfPastries / 3);
       }
-      else 
+      else
       {
-        return numOfPastries * 2;
-        
+        return numOfPastries * 2;        
       }
     }
   }
-    //Buy 1 for $2
-    //1st & 2nd loaves cost $2/each
-    //Buy 3 for $5
-    //3rd loaf costs $1 - if pastryNum % 3 == 0, totCost = $5 * (pastryNum / 3)
-    //else totPastryCost = pastryNum * 2
-  // }
-// }
 }
