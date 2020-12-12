@@ -19,15 +19,15 @@ namespace PierresBakery
 
   public class Pastry
   {
-    public bool TotPastries(int numOfPastries)
-    {
-      if (numOfPastries % 3 == 0)
-      {
-        return true;
-      }
-      else 
-      {
-        return false;
+    // public int TotPastries(int numOfPastries)
+    // {
+      // if (numOfPastries % 3 == 0)
+      // {
+      //   return 5 * (numOfPastries/3);
+      // }
+      // else 
+      // {
+      //   return (2 * numOfPastries) - (1 * (numOfPastries % 3));
       }
     }
     //Buy 1 for $2
@@ -35,5 +35,5 @@ namespace PierresBakery
     //Buy 3 for $5
     //3rd loaf costs $1 - if pastryNum % 3 == 0, totCost = $5 * (pastryNum / 3)
     //else totPastryCost = pastryNum * 2
-  }
-}
+  // }
+// }
