@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-// using System.Threading;
-// using PierresBakery.Models;
+using System.Threading;
+using PierresBakery.Models;
 using System;
 
 public class Program
@@ -17,52 +17,54 @@ public class Program
     string response = Console.ReadLine().ToLower();
     Console.WriteLine(response);
 
-  //   if (response == "bread") 
-  //   {
-  //     Console.WriteLine("How many loaves of bread would you like to purchase? (e.g. 2)");
-  //     int breadLoaves = Console.ReadLine().ToInt();
-  //     // create if/ else for numbers vs anything else
-  //     // Console.WriteLine("Is this the correct number of bread loaves?"(Yes/No));  // stretch 
-  //     Console.WriteLine(breadLoaves * cost);
-  //     // exception handling for 0 and negative numbers - return "Not a valid #"
-         // if user orders # of loaves not divisible by 3, say some kind of return about the discount applying to x # of loaves 
-         // stretch - ask if they want to add to their order to X totLoaves for free loaf, return new totalCost & totalLoaves
-  //     // string confirmNumLoaves = Console.ReadLine().ToLower();  // stretch
-  //     //   if (confirmNumLoaves == "yes")
-  //     //   {
-  //     //     return costLoaves; // TODO
-  //     //   }
-  //     //   else
-  //     //   {
-  //     //     return Program.Main(); // (stretch - go to beginning of loop)
-  //     //   }
-  //   }
-  //   else if (response == "pastries")
-  //   {
-  //     Console.WriteLine("How many pastries would you like to purchase? (e.g. 2)");
-  //     int pastryNum = Console.ReadLine().ToInt();  // (stretch - accept num value OR words translated to num) 
-  //     // create if/ else for numbers vs anything else
-  //     // Console.WriteLine("Is this the correct number of pastries?"(Yes/No)); //stretch
-  //     Console.WriteLine(pastryNum * cost);
-  //     // exception handling for 0 and negative numbers - return "Not a valid #"
-  //   //   string confirmNumPastries = Console.ReadLine().ToLower();  //stretch
-  //   //     if (confirmNumPastries == "yes")
-  //   //       {
-  //   //         return costPastries; // TODO
-  //   //       }
-  //   //     else
-  //   //       {
-  //   //         return Program.Main(); // (stretch - go to beginning of loop)
-  //   //       }
-  //   }
-  //   else if (response == "exit")
-  //   {
-  //     Console.WriteLine("Come again soon! Goodbye!");
-  //   }
-  //   else
-  //   {
-  //     Console.WriteLine("I'm not sure what you mean. Please try again.");
-  //     Program.Main();
-  //   }
+    if (response == "bread") 
+    {
+      Console.WriteLine("How many loaves of bread would you like to purchase? (e.g. 2)");
+      string stringBreadLoaves = Console.ReadLine();
+      int breadLoavesToNum = int.Parse(stringBreadLoaves);
+      // create if/ else for numbers vs anything else
+      // Console.WriteLine("Is this the correct number of bread loaves?"(Yes/No));  // stretch 
+      Console.WriteLine(TotBreadLoavesCost(breadLoavesToNum));
+      // exception handling for 0 and negative numbers - return "Not a valid #"
+        // if user orders # of loaves not divisible by 3, say some kind of return about the discount applying to x # of loaves 
+        // stretch - ask if they want to add to their order to X totLoaves for free loaf, return new totalCost & totalLoaves
+      // string confirmNumLoaves = Console.ReadLine().ToLower();  // stretch
+      //   if (confirmNumLoaves == "yes")
+      //   {
+      //     return costLoaves; // TODO
+      //   }
+      //   else
+      //   {
+      //     return Program.Main(); // (stretch - go to beginning of loop)
+      //   }
+    }
+    else if (response == "pastries")
+    {
+      Console.WriteLine("How many pastries would you like to purchase? (e.g. 2)");
+      string stringPastries = Console.ReadLine();  // (stretch - accept num value OR words translated to num) 
+      int pastryStringToNum = int.Parse(stringPastries);
+      // create if/ else for numbers vs anything else
+      // Console.WriteLine("Is this the correct number of pastries?"(Yes/No)); //stretch
+      Console.WriteLine(TotPastryCost(pastryStringToNum));
+      // exception handling for 0 and negative numbers - return "Not a valid #"
+    //   string confirmNumPastries = Console.ReadLine().ToLower();  //stretch
+    //     if (confirmNumPastries == "yes")
+    //       {
+    //         return costPastries; // TODO
+    //       }
+    //     else
+    //       {
+    //         return Program.Main(); // (stretch - go to beginning of loop)
+    //       }
+    }
+    else if (response == "exit")
+    {
+      Console.WriteLine("Come again soon! Goodbye!");
+    }
+    else
+    {
+      Console.WriteLine("I'm not sure what you mean. Please try again.");
+      Program.Main();
+    }
   }
 }
