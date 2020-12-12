@@ -8,17 +8,13 @@ namespace PierresBakery
     {
       if (numOfLoaves % 3 == 0)
       {
-        return 10 * (numOfLoaves / 3);      //totBreadCost
+        return 10 * (numOfLoaves / 3);
       }
-      else 
+      else
       {
-        return (5 * numOfLoaves) - (5 * (numOfLoaves % 3)); //
+        return (5 * numOfLoaves) - (5 * (numOfLoaves % 3));
       }
     }
-    //Buy 2, get 1 free.
-    //3rd loaf is 0 dollars - if breadLoaves % 3 == 0, totBreadCost = 10  * (breadLoaves / 3)
-    // else totBreadCost = breadLoaves * 5
-    //Single loaf = $5
   }
 
   public class Pastry

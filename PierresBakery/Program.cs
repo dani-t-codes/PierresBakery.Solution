@@ -25,6 +25,8 @@ public class Program
   //     // Console.WriteLine("Is this the correct number of bread loaves?"(Yes/No));  // stretch 
   //     Console.WriteLine(breadLoaves * cost);
   //     // exception handling for 0 and negative numbers - return "Not a valid #"
+         // if user orders # of loaves not divisible by 3, say some kind of return about the discount applying to x # of loaves 
+         // stretch - ask if they want to add to their order to X totLoaves for free loaf, return new totalCost & totalLoaves
   //     // string confirmNumLoaves = Console.ReadLine().ToLower();  // stretch
   //     //   if (confirmNumLoaves == "yes")
   //     //   {
