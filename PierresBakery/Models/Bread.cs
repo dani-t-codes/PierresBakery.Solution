@@ -14,7 +14,7 @@ namespace PierresBakery
       else 
       {
         //return cost
-        return 5 * numOfLoaves;   // <-- + (numOfLoaves % 3)
+        return (5 * numOfLoaves) - (5 * (numOfLoaves % 3)); // (10 * (numOfLoaves / 3)) + (5 * (numOfLoaves % 3));
       }
     }
     //Buy 2, get 1 free.
