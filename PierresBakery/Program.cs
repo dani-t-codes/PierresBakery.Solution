@@ -15,16 +15,15 @@ public class Program
     Console.WriteLine("--------------------------");
     Console.WriteLine("What would you like to purchase today (Bread/Pastries/Exit)");
     string response = Console.ReadLine().ToLower();
-    Console.WriteLine(response);
 
     if (response == "bread") 
     {
       Console.WriteLine("How many loaves of bread would you like to purchase? (e.g. 2)");
       string stringBreadLoaves = Console.ReadLine();
       int breadLoavesToNum = int.Parse(stringBreadLoaves);
-      // create if/ else for numbers vs anything else
-      // Console.WriteLine("Is this the correct number of bread loaves?"(Yes/No));  // stretch 
       Console.WriteLine(TotBreadLoavesCost(breadLoavesToNum));
+      // Console.WriteLine("Is this the correct number of bread loaves?"(Yes/No));  // stretch 
+      // create if/ else for numbers vs anything else
       // exception handling for 0 and negative numbers - return "Not a valid #"
         // if user orders # of loaves not divisible by 3, say some kind of return about the discount applying to x # of loaves 
         // stretch - ask if they want to add to their order to X totLoaves for free loaf, return new totalCost & totalLoaves
@@ -45,7 +44,7 @@ public class Program
       int pastryStringToNum = int.Parse(stringPastries);
       // create if/ else for numbers vs anything else
       // Console.WriteLine("Is this the correct number of pastries?"(Yes/No)); //stretch
-      Console.WriteLine(TotPastryCost(pastryStringToNum));
+      // Console.WriteLine(TotPastryCost(pastryStringToNum));
       // exception handling for 0 and negative numbers - return "Not a valid #"
     //   string confirmNumPastries = Console.ReadLine().ToLower();  //stretch
     //     if (confirmNumPastries == "yes")
@@ -67,4 +66,9 @@ public class Program
       Program.Main();
     }
   }
+
+//   private static bool TotBreadLoavesCost(int breadLoavesToNum)
+//   {
+//     throw new NotImplementedException();
+//   }
 }

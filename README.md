@@ -30,7 +30,6 @@ This project requires the technologies listed in the above 'Technologies Used' s
 
 If you already have the necessary technologies on your local system, the commands necessary for running this console application and its tests will be found at the bottom of the instructions list. 
 
-
 #### Installing Git
 ###### For Mac Users
 
@@ -72,7 +71,7 @@ Once the project has been cloned to your computer and you have all the necessary
 
 * Navigate to the project folder, PierresBakery.Solution, on your Terminal or CMD.
 * Move to the PierresBakery subfolder, and `dotnet build` will get bin/ and obj/ folders downloaded for the program to run.
-* Move to the PierresBakery.Tests subfolder. Running `dotnet restore` will install other necessary packages listed in project's boilerplate. 
+* Move to the PierresBakery.Tests subfolder via the terminal. Running `dotnet restore` will install other necessary packages listed in project's boilerplate. 
 * When in the PierresBakery.Tests subfolder, `dotnet test` will allow you to run the test-driven-development tests for the project's Models. 
 * In the main project folder, `dotnet run` will run the application in the console. 
 
@@ -81,29 +80,12 @@ Once the project has been cloned to your computer and you have all the necessary
 
 | Spec                                            | Input                        | Output                        |
 | :---------------------------------------------- | :--------------------------- | :----------------------------|
-| **User begins program, Console logs welcome message & daily specials** | User enters: `dotnet run` | Return: "Welcome Message & Pricing" |
+| **User begins program, Console logs welcome message & daily specials** | User begins program: `dotnet run` | Return: "Welcome Message & Pricing" |
 | **User Chooses Bread Items to Purchase** | User enters: (Bread/Pastries) | Return: 4 bread loaves |
 | **Console logs Cost of Chosen Bread Items** | User enters: 4 bread loaves | Output: "Bread Cost: $15" |
 | **User Chooses Pastry Items to Purchase** | User enters: (Bread/Pastries) | Return: 3 pastries |
 | **Console logs cost of Chosen Bread Items** | User enters: 4 bread loaves | Output: "Pastry Cost: $5" |
 
-
-### Tests
-
-Describe: testMethod()
-Test: testMethod(userInput).toEqual(userInput read backwards, in order)
-Expect: testMethod(palindrome).toEqual(emordnilap)
-
-Describe: checkMethodStatus()
-Test:
-If Array.Reverse() == userInputPalindrome
-  return true
-  Console.WriteLine("You've found a palindrome!")
-Else Array.Reverse(). !== userInputPalindromes
-  return false
-  Console.WriteLine("That is not a palindrome.")
-Expect: checkPalindromeStatus(palindrome).return(False - emordnilap)
-Expect: checkPalindromeStatus(racecar).return(True - racecar)
 
 ## Known bugs
 
