@@ -6,14 +6,22 @@ namespace PierresBakery
   {
     public int TotBreadLoaves(int numOfLoaves)
     {
-      if (numOfLoaves % 3 == 0)
-      {
-        return 10 * (numOfLoaves / 3);
-      }
-      else
+      if (numOfLoaves % 3 != 0 || numOfLoaves != 1 || numOfLoaves != 2)
       {
         return (5 * numOfLoaves) - (5 * (numOfLoaves % 3));
       }
+      else if (numOfLoaves == 1 || numOfLoaves == 2)
+      {
+        return numOfLoaves * 5;
+      }
+      else if (numOfLoaves % 3 == 0)
+      {
+        return 10 * (numOfLoaves / 3);
+      }
+      // else
+      // {
+      //   return ("Please enter a valid number");
+      // }
     }
   }
 
