@@ -35,22 +35,22 @@ namespace PierresBakery
   {
     public int TotPastryCost(int numOfPastries)
     {
-      if (numOfPastries % 3 == 0)
+      if (numOfPastries == 1 || numOfPastries == 2)
+      {
+        return 2 * (numOfPastries);
+      }
+      else if (numOfPastries > 3 && numOfPastries % 3 != 0)
+      {
+        return (2 * numOfPastries) - ((numOfPastries % 3)); 
+      }
+      else if (numOfPastries % 3 == 0)
       {
         return 5 * (numOfPastries / 3);
-      }
-      else if (numOfPastries == 1)
-      {
-        return 2 * (numOfPastries);
-      }
-      else if (numOfPastries == 2)
-      {
-        return 2 * (numOfPastries);
       }
       else 
       {
         return numOfPastries * 2;
-        // return (2 * numOfPastries) - (1 * (numOfPastries % 3));
+        
       }
     }
   }

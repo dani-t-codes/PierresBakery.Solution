@@ -70,10 +70,10 @@ namespace PierresBakery.Tests
     }
 
   [TestMethod]
-    public void TotPastryCost_NumberNotDivisibleByThreeCost_Eight()
+    public void TotPastryCost_NumberNotDivisibleByThreeCost_Seven()
     {
       Pastry testPastry = new Pastry();
-      Assert.AreEqual(8, testPastry.TotPastryCost(4));
+      Assert.AreEqual(7, testPastry.TotPastryCost(4));
     }
     
     [TestMethod]
