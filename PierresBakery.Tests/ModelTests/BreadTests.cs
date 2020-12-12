@@ -28,6 +28,13 @@ namespace PierresBakery.Tests
       Bread testBread = new Bread();
       Assert.AreEqual(30, testBread.TotBreadLoaves(8));
     }
+
+    [TestMethod]
+    public void TotBreadLoaves_NumberNotDivisibleByThree_10()
+    {
+      Bread testBread = new Bread();
+      Assert.AreEqual(10, testBread.TotBreadLoaves(2));
+    }
   }
 
   // [TestClass]
