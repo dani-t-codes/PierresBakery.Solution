@@ -39,6 +39,10 @@ namespace PierresBakery
       {
         return 5 * (numOfPastries / 3);
       }
+      else if (numOfPastries == 1)
+      {
+        return 2 * (numOfPastries);
+      }
       else 
       {
         return numOfPastries * 2;
