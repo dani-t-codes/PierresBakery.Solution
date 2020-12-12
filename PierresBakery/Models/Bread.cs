@@ -8,13 +8,11 @@ namespace PierresBakery
     {
       if (numOfLoaves % 3 == 0)
       {
-        //return cost w/ discount
         return 10 * (numOfLoaves / 3);      //totBreadCost
       }
       else 
       {
-        //return cost
-        return (5 * numOfLoaves) - (5 * (numOfLoaves % 3)); // (10 * (numOfLoaves / 3)) + (5 * (numOfLoaves % 3));
+        return (5 * numOfLoaves) - (5 * (numOfLoaves % 3)); //
       }
     }
     //Buy 2, get 1 free.

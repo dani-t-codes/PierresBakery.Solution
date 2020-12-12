@@ -15,10 +15,10 @@ namespace PierresBakery.Tests
       Assert.AreEqual(20, testBread.TotBreadLoaves(6));
     }
     [TestMethod]
-    public void TotBreadLoaves_NumberNotDivisibleByThree_40()
+    public void TotBreadLoaves_NumberNotDivisibleByThree_30()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(40, testBread.TotBreadLoaves(8));
+      Assert.AreEqual(30, testBread.TotBreadLoaves(8));
     }
   //   [TestMethod]
   //   public void TotBreadLoaves_TotalReturnsDiscountPriceForLoavesDivisibleByThree_20()
