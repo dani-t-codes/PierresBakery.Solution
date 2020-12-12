@@ -9,46 +9,48 @@ namespace PierresBakery.Tests
   public class BreadTests
   {
     [TestMethod]
-    public void TotBreadLoaves_NumGreaterThanThreeNotDivisibleByThreeCost_30()
+    public void TotBreadLoavesCost_NumGreaterThanThreeNotDivisibleByThreeCost_30()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(30, testBread.TotBreadLoaves(8));
+      Assert.AreEqual(30, testBread.TotBreadLoavesCost(8));
     }
 
     [TestMethod]
-    public void TotBreadLoaves_NumGreaterThanThreeDivisibleByThreeCost_20()
+    public void TotBreadLoavesCost_NumGreaterThanThreeDivisibleByThreeCost_20()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(20, testBread.TotBreadLoaves(6));
+      Assert.AreEqual(20, testBread.TotBreadLoavesCost(6));
     }
 
     [TestMethod]
-    public void TotBreadLoaves_ThreeLoavesCost_10()
+    public void TotBreadLoavesCost_ThreeLoavesCost_10()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(10, testBread.TotBreadLoaves(3));
+      Assert.AreEqual(10, testBread.TotBreadLoavesCost(3));
     }
 
     [TestMethod]
-    public void TotBreadLoaves_TwoLoavesCost_10()
+    public void TotBreadLoavesCost_TwoLoavesCost_10()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(10, testBread.TotBreadLoaves(2));
+      Assert.AreEqual(10, testBread.TotBreadLoavesCost(2));
     }
 
     [TestMethod]
-    public void TotBreadLoaves_OneLoafCost_Five()
+    public void TotBreadLoavesCost_OneLoafCost_Five()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(5, testBread.TotBreadLoaves(1));
+      Assert.AreEqual(5, testBread.TotBreadLoavesCost(1));
     }
 
     [TestMethod]
-    public void TotBreadLoaves_ZeroLoavesCost_Zero()
+    public void TotBreadLoavesCost_ZeroLoavesCost_Zero()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(0, testBread.TotBreadLoaves(0));
+      Assert.AreEqual(0, testBread.TotBreadLoavesCost(0));
     }
+
+//refactor to PastryTests.cs
 
   // [TestClass]
   // public class PastryTests

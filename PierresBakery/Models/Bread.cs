@@ -4,7 +4,7 @@ namespace PierresBakery
 {
   public class Bread
   {
-    public int TotBreadLoaves(int numOfLoaves)
+    public int TotBreadLoavesCost(int numOfLoaves)
     {
       if (numOfLoaves != 1 && numOfLoaves != 2 && numOfLoaves != 3 && numOfLoaves % 3 == 0)
       {
@@ -28,6 +28,8 @@ namespace PierresBakery
       }
     }
   }
+
+//refactor to Pastry.cs
 
   public class Pastry
   {
