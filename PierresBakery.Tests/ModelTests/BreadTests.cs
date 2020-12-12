@@ -49,23 +49,23 @@ namespace PierresBakery.Tests
       Bread testBread = new Bread();
       Assert.AreEqual(0, testBread.TotBreadLoavesCost(0));
     }
-
+  }
 //refactor to PastryTests.cs
 
-  // [TestClass]
-  // public class PastryTests
-  // {
-  //   [TestMethod]
-  //   public void TotPastries_NumberDivisibleByThree_True()
-  //   {
-  //     Pastry testPastry = new Pastry();
-  //     Assert.AreEqual(true, testPastry.TotPastries(9));
-  //   }
-  // [TestMethod]
-  //   public void TotPastries_NumberNotDivisibleByThree_False()
-  //   {
-  //     Pastry testPastry = new Pastry();
-  //     Assert.AreEqual(false, testPastry.TotPastries(7));
-  //   }
+  [TestClass]
+  public class PastryTests
+  {
+    [TestMethod]
+    public void TotPastryCost_NumberDivisibleByThree_Fifteen()
+    {
+      Pastry testPastry = new Pastry();
+      Assert.AreEqual(15, testPastry.TotPastryCost(9));
+    }
+  [TestMethod]
+    public void TotPastryCost_NumberNotDivisibleByThree_Eight()
+    {
+      Pastry testPastry = new Pastry();
+      Assert.AreEqual(8, testPastry.TotPastryCost(4));
+    }
   }
 }

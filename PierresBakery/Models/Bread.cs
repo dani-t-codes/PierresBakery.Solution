@@ -33,17 +33,19 @@ namespace PierresBakery
 
   public class Pastry
   {
-    // public int TotPastries(int numOfPastries)
-    // {
-      // if (numOfPastries % 3 == 0)
-      // {
-      //   return 5 * (numOfPastries/3);
-      // }
-      // else 
-      // {
-      //   return (2 * numOfPastries) - (1 * (numOfPastries % 3));
+    public int TotPastryCost(int numOfPastries)
+    {
+      if (numOfPastries % 3 == 0)
+      {
+        return 5 * (numOfPastries / 3);
+      }
+      else 
+      {
+        return numOfPastries * 2;
+        // return (2 * numOfPastries) - (1 * (numOfPastries % 3));
+      }
+    }
   }
-}
     //Buy 1 for $2
     //1st & 2nd loaves cost $2/each
     //Buy 3 for $5
@@ -51,4 +53,4 @@ namespace PierresBakery
     //else totPastryCost = pastryNum * 2
   // }
 // }
-  // }
+}
