@@ -61,7 +61,14 @@ namespace PierresBakery.Tests
       Pastry testPastry = new Pastry();
       Assert.AreEqual(15, testPastry.TotPastryCost(9));
     }
-    
+
+    [TestMethod]
+    public void TotPastryCost_NumberNotDivisibleByThreeCost_Fourteen()
+    {
+      Pastry testPastry = new Pastry();
+      Assert.AreEqual(14, testPastry.TotPastryCost(8));
+    }
+
   [TestMethod]
     public void TotPastryCost_NumberNotDivisibleByThreeCost_Eight()
     {
