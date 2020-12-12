@@ -4,18 +4,18 @@ namespace PierresBakery
 {
   public class Bread
   {
-    public bool TotBreadLoaves(int numOfLoaves)
+    public int TotBreadLoaves(int numOfLoaves)
     {
-      // if (numOfLoaves % 3 == 0)
-      // {
+      if (numOfLoaves % 3 == 0)
+      {
+        //return cost w/ discount
+        return 10 * (numOfLoaves / 3);      //totBreadCost
+      }
+      else 
+      {
         //return cost
-        // int totBreadCost = 10 * (numOfLoaves / 3);
-        return numOfLoaves % 3 == 0; //totBreadCost;
-      // }
-      // else 
-      // {
-      //   return false;
-      // }
+        return 5 * numOfLoaves;   // <-- + (numOfLoaves % 3)
+      }
     }
     //Buy 2, get 1 free.
     //3rd loaf is 0 dollars - if breadLoaves % 3 == 0, totBreadCost = 10  * (breadLoaves / 3)

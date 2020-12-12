@@ -9,23 +9,23 @@ namespace PierresBakery.Tests
   public class BreadTests
   {
     [TestMethod]
-    public void TotBreadLoaves_NumberDivisibleByThree_True()
+    public void TotBreadLoaves_NumberDivisibleByThree_20()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(true, testBread.TotBreadLoaves(6));
+      Assert.AreEqual(20, testBread.TotBreadLoaves(6));
     }
     [TestMethod]
-    public void TotBreadLoaves_NumberNotDivisibleByThree_False()
+    public void TotBreadLoaves_NumberNotDivisibleByThree_40()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(false, testBread.TotBreadLoaves(8));
+      Assert.AreEqual(40, testBread.TotBreadLoaves(8));
     }
-    // [TestMethod]
-    // public void TotBreadLoaves_TotalReturnsDiscountPriceForThree_TODO()
-    // {
-    //   Bread testBread = new Bread();
-    //   Assert.AreEqual(TODO, testBread.TotBreadLoaves());
-    // }
+  //   [TestMethod]
+  //   public void TotBreadLoaves_TotalReturnsDiscountPriceForLoavesDivisibleByThree_20()
+  //   {
+  //     Bread testBread = new Bread();
+  //     Assert.AreEqual(20, testBread.TotBreadLoaves(6));
+  //   }
   }
 
   [TestClass]
