@@ -16,18 +16,25 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void TotBreadLoaves_NumberNotDivisibleByThree_30()
+    public void TotBreadLoaves_NumGreaterThanThreeNotDivisibleByThree_30()
     {
       Bread testBread = new Bread();
       Assert.AreEqual(30, testBread.TotBreadLoaves(8));
-    } // fail returns 20
+    }
 
     [TestMethod]
-    public void TotBreadLoaves_NumberNotDivisibleByThree_10()
+    public void TotBreadLoaves_IsThree_10()
+    {
+      Bread testBread = new Bread();
+      Assert.AreEqual(10, testBread.TotBreadLoaves(3));
+    }
+
+    [TestMethod]
+    public void TotBreadLoaves_IsTwo_10()
     {
       Bread testBread = new Bread();
       Assert.AreEqual(10, testBread.TotBreadLoaves(2));
-    } // fail returns 0
+    }
 
     [TestMethod]
     public void TotBreadLoaves_IsOne_Five()
@@ -37,10 +44,10 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void TotBreadLoaves_NumberDivisibleByThree_10()
+    public void TotBreadLoaves_IsZero_Zero()
     {
       Bread testBread = new Bread();
-      Assert.AreEqual(10, testBread.TotBreadLoaves(3));
+      Assert.AreEqual(0, testBread.TotBreadLoaves(0));
     }
   }
 
