@@ -87,9 +87,28 @@ Once the project has been cloned to your computer and you have all the necessary
 | **Console logs cost of Chosen Bread Items** | User enters: 4 bread loaves | Output: "Pastry Cost: $5" |
 
 
+## Stretch Goals
+
+If I were to further build out this application in the console, I would code for the user to be able to enter integer values or numbers in word form and still return number of loaves/pastries and the cost in an integer format. I would confirm the user's total number of bread loaves or pastries before returning the cost with something like the following inside of the existing conditional statement in main for choosing bread/pastries/exit: 
+
+Pseudo-code: 
+  string confirmNumPastries = Console.ReadLine().ToLower();
+    if (confirmNumPastries == "yes")
+      {
+        return costPastries;
+      }
+    else
+      {
+        return Program.Main(); 
+      }
+
+Additionally, in the above code, if the user said the number of pastries/bread loaves was not the amount they specified, the conditional would return them not to the beginning of the program, but to the beginning of the main conditional. 
+
+Finally, to increase sales at Pierre's Bakery, after a user had selected a number of pastries or bread loaves that were not the best sale price (i.e. any number not divisible by 3), the console would log to the user that they were X number of loaves/pastries away from that day's daily special price. The console would then ask the user if they want to add to their order the difference of loaves/pastries to get the free loaf or the extra pastry for cheaper. If the user agreed, the console would log the updated total price. 
+
 ## Known bugs
 
-No known bugs as of now. 
+As of 12.13.2020, Program.cs is not accurately reading the methods within classes from Bread.cs. Auto-implemented properties have not been successfully deployed or tested yet.  
 
 ### Legal, or License
 
