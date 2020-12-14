@@ -6,9 +6,18 @@ namespace PierresBakery.Tests
   [TestClass]
   public class BreadTests
   {
+    // [TestMethod]
+    // public void BreadConstructor_CreatesInstanceOfBread_Bread()
+    // {
+    //   Bread newBread = new Bread(1);
+    //   Assert.AreEqual(typeof(Bread), newBread.GetType());
+    // }
+
     [TestMethod]
     public void TotBreadLoavesCost_NumGreaterThanThreeNotDivisibleByThreeCost_30()
     {
+      // int numOfLoaves = 8;
+      // Bread testBread = new Bread(numOfLoaves);
       Bread testBread = new Bread();
       Assert.AreEqual(30, testBread.TotBreadLoavesCost(8));
     }
@@ -16,6 +25,8 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void TotBreadLoavesCost_NumGreaterThanThreeDivisibleByThreeCost_20()
     {
+      // int numOfLoaves = 6;
+      // Bread testBread = new Bread(numOfLoaves);
       Bread testBread = new Bread();
       Assert.AreEqual(20, testBread.TotBreadLoavesCost(6));
     }
@@ -53,6 +64,13 @@ namespace PierresBakery.Tests
   [TestClass]
   public class PastryTests
   {
+    // [TestMethod]
+    // public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
+    // {
+    //   Pastry newPastry = new Pastry(1);
+    //   Assert.AreEqual(typeof(Pastry), newPastry.GetType());
+    // }
+
     [TestMethod]
     public void TotPastryCost_NumberDivisibleByThreeCost_Fifteen()
     {

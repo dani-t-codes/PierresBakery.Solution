@@ -4,6 +4,15 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
+    // Auto-implemented properties
+    // public int NumOfLoaves { get; set; }
+
+    // Constructor
+    // public Bread(int numOfLoaves)
+    // {
+    //   NumOfLoaves = numOfLoaves;
+    // }
+
     public int TotBreadLoavesCost(int numOfLoaves)
     {
       if (numOfLoaves != 1 && numOfLoaves != 2 && numOfLoaves != 3 && numOfLoaves % 3 == 0)
@@ -29,10 +38,17 @@ namespace PierresBakery.Models
     }
   }
 
-//refactor to Pastry.cs
-
   public class Pastry
   {
+    //Auto-implemented properties
+    // public int NumOfPastries { get; set; }
+
+    // Constructor
+    // public Pastry(int numOfPastries)
+    // {
+    //   NumOfPastries = numOfPastries;
+    // }
+    
     public int TotPastryCost(int numOfPastries)
     {
       if (numOfPastries == 1 || numOfPastries == 2)
