@@ -4,11 +4,11 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
-    // Auto-implemented properties
+    // // Auto-implemented properties
     // public int NumOfLoaves { get; set; }
 
-    // Constructor
-    // public Bread(int numOfLoaves)
+    // // Constructor
+    // public Bread()
     // {
     //   NumOfLoaves = numOfLoaves;
     // }
@@ -44,11 +44,11 @@ namespace PierresBakery.Models
     // public int NumOfPastries { get; set; }
 
     // Constructor
-    // public Pastry(int numOfPastries)
+    // public Pastry()
     // {
     //   NumOfPastries = numOfPastries;
     // }
-    
+
     public int TotPastryCost(int numOfPastries)
     {
       if (numOfPastries == 1 || numOfPastries == 2)
