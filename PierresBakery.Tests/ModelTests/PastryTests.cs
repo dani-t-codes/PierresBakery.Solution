@@ -18,6 +18,61 @@ using System;
     }
 
     [TestMethod]
+    public void GetNumOfPastries_ReturnsNumOfPastries_Int()
+    {
+      //Arrange
+      int numOfPastries = 4;
+      //Act
+      Pastry newPastry = new Pastry(numOfPastries);
+      int result = newPastry.NumOfPastries;
+      //Assert
+      Assert.AreEqual(numOfPastries, result);
+    }
+
+    [TestMethod]
+    public void SetNumOfPastries_SetNumOfPastries_Int()
+    {
+      //Arrange
+      int numOfPastries = 4;
+      Pastry newPastry = new Pastry(numOfPastries);
+      //Act
+      int updatedNumOfPastries = 6;
+      newPastry.NumOfPastries = updatedNumOfPastries;
+      int result = newPastry.NumOfPastries;
+      //Assert
+      Assert.AreEqual(updatedNumOfPastries, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_PastryList()
+    {
+      List<Pastry> newList = new List<Pastry> { };
+      List<Pastry> result = Pastry.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsItems_ItemList()
+    {
+      //Arrange
+      int pastries01 = 3;
+      int pastries02 = 10;
+      Pastry newPastry1 = new Pastry(pastries01);
+      Pastry newPastry2 = new Pastry(pastries02);
+      List<Pastry> newList = new List<Pastry> { newPastry1, newPastry1 };
+      //Act
+      List<Pastry> result = Pastry.GetAll();
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public static void ClearAll()
+    {
+      _pastries.Clear();
+    }
+
+    [TestMethod]
     public void TotPastryCost_NumberDivisibleByThreeCost_Fifteen()
     {
       int numOfPastries = 9;
@@ -63,13 +118,5 @@ using System;
       int numOfPastries = 1;
       Pastry testPastry = new Pastry(numOfPastries);
       Assert.AreEqual(2, testPastry.TotPastryCost(1));
-    }
-
-    [TestMethod]
-    public void GetAll_ReturnsEmptyList_BreadList()
-    {
-      List<Pastry> newList = new List<Pastry> { };
-      List<Pastry> result = Pastry.GetAll();
-      CollectionAssert.AreEqual(newList, result);
     }
   }

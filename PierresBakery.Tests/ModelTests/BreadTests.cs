@@ -21,6 +21,47 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
+    public void GetNumOfLoaves_ReturnsNumOfLoaves_Int()
+    {
+      //Arrange
+      int numOfLoaves = 4;
+      //Act
+      Bread newBread = new Bread(numOfLoaves);
+      int result = newBread.NumOfLoaves;
+      //Assert
+      Assert.AreEqual(numOfLoaves, result);
+    }
+
+    [TestMethod]
+    public void SetNumOfLoaves_SetNumOfLoaves_Int()
+    {
+      //Arrange
+      int numOfLoaves = 4;
+      Bread newBread = new Bread(numOfLoaves);
+      //Act
+      int updatedNumOfLoaves = 6;
+      newBread.NumOfLoaves = updatedNumOfLoaves;
+      int result = newBread.NumOfLoaves;
+      //Assert
+      Assert.AreEqual(updatedNumOfLoaves, result);
+
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_BreadList()
+    {
+      List<Bread> newList = new List<Bread> { };
+      List<Bread> result = Bread.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public static void ClearAll()
+    {
+      _loaves.Clear();
+    }
+    
+    [TestMethod]
     public void TotBreadLoavesCost_NumGreaterThanThreeNotDivisibleByThreeCost_30()
     {
       int numOfLoaves = 8;
@@ -66,14 +107,6 @@ namespace PierresBakery.Tests
       int numOfLoaves = 0;
       Bread testBread = new Bread(numOfLoaves);
       Assert.AreEqual(0, testBread.TotBreadLoavesCost(0));
-    }
-
-    [TestMethod]
-    public void GetAll_ReturnsEmptyList_BreadList()
-    {
-      List<Bread> newList = new List<Bread> { };
-      List<Bread> result = Bread.GetAll();
-      CollectionAssert.AreEqual(newList, result);
     }
   }
 }

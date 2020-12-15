@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using System.Threading;
-using PierresBakery.Models;
 
 public class Pastry
   {
