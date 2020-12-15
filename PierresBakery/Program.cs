@@ -21,6 +21,7 @@ public class Program
       Console.WriteLine("How many loaves of bread would you like to purchase? (e.g. 2)");
       string stringBreadLoaves = Console.ReadLine();
       int breadLoavesToNum = int.Parse(stringBreadLoaves);
+      Bread newBread = new Bread(breadLoavesToNum);
       // Console.WriteLine(TotBreadLoavesCost(breadLoavesToNum));
       // create if/ else for numbers vs anything else
       // exception handling for 0 and negative numbers - return "Not a valid #"
@@ -32,6 +33,7 @@ public class Program
       string stringPastries = Console.ReadLine();  
       int pastryStringToNum = int.Parse(stringPastries);
       // create if/ else for numbers vs anything else
+      Pastry newPastry = new Pastry(pastryStringToNum);
       // Console.WriteLine(TotPastryCost(pastryStringToNum));
       // exception handling for 0 and negative numbers - return "Not a valid #"
     }

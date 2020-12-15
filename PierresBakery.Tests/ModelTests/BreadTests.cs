@@ -6,56 +6,58 @@ namespace PierresBakery.Tests
   [TestClass]
   public class BreadTests
   {
-    // [TestMethod]
-    // public void BreadConstructor_CreatesInstanceOfBread_Bread()
-    // {
-    //   Bread newBread = new Bread(1);
-    //   Assert.AreEqual(typeof(Bread), newBread.GetType());
-    // }
+    [TestMethod]
+    public void BreadConstructor_CreatesInstanceOfBread_Bread()
+    {
+      Bread newBread = new Bread(1);
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
+    }
 
     [TestMethod]
     public void TotBreadLoavesCost_NumGreaterThanThreeNotDivisibleByThreeCost_30()
     {
-      // int numOfLoaves = 8;
-      // Bread testBread = new Bread(numOfLoaves);
-      Bread testBread = new Bread();
+      int numOfLoaves = 8;
+      Bread testBread = new Bread(numOfLoaves);
       Assert.AreEqual(30, testBread.TotBreadLoavesCost(8));
     }
 
     [TestMethod]
     public void TotBreadLoavesCost_NumGreaterThanThreeDivisibleByThreeCost_20()
     {
-      // int numOfLoaves = 6;
-      // Bread testBread = new Bread(numOfLoaves);
-      Bread testBread = new Bread();
+      int numOfLoaves = 6;
+      Bread testBread = new Bread(numOfLoaves);
       Assert.AreEqual(20, testBread.TotBreadLoavesCost(6));
     }
 
     [TestMethod]
     public void TotBreadLoavesCost_ThreeLoavesCost_10()
     {
-      Bread testBread = new Bread();
+      int numOfLoaves = 3;
+      Bread testBread = new Bread(numOfLoaves);
       Assert.AreEqual(10, testBread.TotBreadLoavesCost(3));
     }
 
     [TestMethod]
     public void TotBreadLoavesCost_TwoLoavesCost_10()
     {
-      Bread testBread = new Bread();
+      int numOfLoaves = 2;
+      Bread testBread = new Bread(numOfLoaves);
       Assert.AreEqual(10, testBread.TotBreadLoavesCost(2));
     }
 
     [TestMethod]
     public void TotBreadLoavesCost_OneLoafCost_Five()
     {
-      Bread testBread = new Bread();
+      int numOfLoaves = 1;
+      Bread testBread = new Bread(numOfLoaves);
       Assert.AreEqual(5, testBread.TotBreadLoavesCost(1));
     }
 
     [TestMethod]
     public void TotBreadLoavesCost_ZeroLoavesCost_Zero()
     {
-      Bread testBread = new Bread();
+      int numOfLoaves = 0;
+      Bread testBread = new Bread(numOfLoaves);
       Assert.AreEqual(0, testBread.TotBreadLoavesCost(0));
     }
   }
@@ -64,52 +66,58 @@ namespace PierresBakery.Tests
   [TestClass]
   public class PastryTests
   {
-    // [TestMethod]
-    // public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
-    // {
-    //   Pastry newPastry = new Pastry(1);
-    //   Assert.AreEqual(typeof(Pastry), newPastry.GetType());
-    // }
+    [TestMethod]
+    public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
+    {
+      Pastry newPastry = new Pastry(1);
+      Assert.AreEqual(typeof(Pastry), newPastry.GetType());
+    }
 
     [TestMethod]
     public void TotPastryCost_NumberDivisibleByThreeCost_Fifteen()
     {
-      Pastry testPastry = new Pastry();
+      int numOfPastries = 9;
+      Pastry testPastry = new Pastry(numOfPastries);
       Assert.AreEqual(15, testPastry.TotPastryCost(9));
     }
 
     [TestMethod]
     public void TotPastryCost_NumberNotDivisibleByThreeCost_Fourteen()
     {
-      Pastry testPastry = new Pastry();
+      int numOfPastries = 8;
+      Pastry testPastry = new Pastry(numOfPastries);
       Assert.AreEqual(14, testPastry.TotPastryCost(8));
     }
 
   [TestMethod]
     public void TotPastryCost_NumberNotDivisibleByThreeCost_Seven()
     {
-      Pastry testPastry = new Pastry();
+      int numOfPastries = 4;
+      Pastry testPastry = new Pastry(numOfPastries);
       Assert.AreEqual(7, testPastry.TotPastryCost(4));
     }
     
     [TestMethod]
     public void TotPastryCost_NumberDivisibleByThreeCost_Five()
     {
-      Pastry testPastry = new Pastry();
+      int numOfPastries = 3;
+      Pastry testPastry = new Pastry(numOfPastries);
       Assert.AreEqual(5, testPastry.TotPastryCost(3));
     }
 
     [TestMethod]
     public void TotPastryCost_CostOfOnePastry_Four()
     {
-      Pastry testPastry = new Pastry();
+      int numOfPastries = 2;
+      Pastry testPastry = new Pastry(numOfPastries);
       Assert.AreEqual(4, testPastry.TotPastryCost(2));
     }
 
       [TestMethod]
     public void TotPastryCost_CostOfOnePastry_Two()
     {
-      Pastry testPastry = new Pastry();
+      int numOfPastries = 1;
+      Pastry testPastry = new Pastry(numOfPastries);
       Assert.AreEqual(2, testPastry.TotPastryCost(1));
     }
   }
