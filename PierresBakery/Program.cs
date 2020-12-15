@@ -4,11 +4,13 @@ using System;
 
 public class Program
 {
-  public static void Main()
+  static void Main()
   {
     Console.WriteLine("Welcome to Pierre's Bakery!");
     Console.WriteLine("--------------------------");
+    Console.WriteLine("--------------------------");
     Console.WriteLine("Today's Daily Deals:");
+    Console.WriteLine("--------------------------");
     Console.WriteLine("Bread: Buy 2, get 1 free. A single loaf costs $5.");
     Console.WriteLine("Pastries: Buy 1 for $2, or 3 for $5.");
     Console.WriteLine("--------------------------");
@@ -22,10 +24,21 @@ public class Program
       string stringBreadLoaves = Console.ReadLine();
       int breadLoavesToNum = int.Parse(stringBreadLoaves);
       Bread newBread = new Bread(breadLoavesToNum);
-      // Console.WriteLine(TotBreadLoavesCost(breadLoavesToNum));
+      Console.WriteLine(TotBreadLoavesCost(breadLoavesToNum));
       // create if/ else for numbers vs anything else
-      // exception handling for 0 and negative numbers - return "Not a valid #"
-      // if user orders # of loaves not divisible by 3, return a line about the number of discounted loaves - i.e. how much the user saved
+      try 
+      {
+        int value = 1 / int.Parse("0"); // should value be breadLoavesToNum?
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine("Message = {0}", ex.Message);
+        Console.WriteLine("Source = {0}", ex.Source);
+        Console.WriteLine("StackTrace = {0}", ex.StackTrace);
+        Console.WriteLine("TargetSite = {0}", ex.TargetSite);
+      }
+
+      Program.Main();
     }
     else if (response == "pastries")
     {
@@ -33,10 +46,22 @@ public class Program
       Console.WriteLine("How many pastries would you like to purchase? (e.g. 2)");
       string stringPastries = Console.ReadLine();  
       int pastryStringToNum = int.Parse(stringPastries);
-      // create if/ else for numbers vs anything else
       Pastry newPastry = new Pastry(pastryStringToNum);
-      // Console.WriteLine(TotPastryCost(pastryStringToNum));
-      // exception handling for 0 and negative numbers - return "Not a valid #"
+      Console.WriteLine(TotPastryCost(pastryStringToNum));
+      // create if/ else for numbers vs anything else
+      try 
+      {
+        int value = 1 / int.Parse("0"); // should value be pastryStringToNum? 
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine("Message = {0}", ex.Message);
+        Console.WriteLine("Source = {0}", ex.Source);
+        Console.WriteLine("StackTrace = {0}", ex.StackTrace);
+        Console.WriteLine("TargetSite = {0}", ex.TargetSite);
+      }
+
+      Program.Main();
     }
     else if (response == "exit")
     {
