@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Threading;
 using PierresBakery.Models;
 using System;
 
@@ -18,6 +17,7 @@ public class Program
 
     if (response == "bread") 
     {
+      List<Bread> result = Bread.GetAll();
       Console.WriteLine("How many loaves of bread would you like to purchase? (e.g. 2)");
       string stringBreadLoaves = Console.ReadLine();
       int breadLoavesToNum = int.Parse(stringBreadLoaves);
@@ -29,6 +29,7 @@ public class Program
     }
     else if (response == "pastries")
     {
+      List<Pastry> result = Pastry.GetAll();
       Console.WriteLine("How many pastries would you like to purchase? (e.g. 2)");
       string stringPastries = Console.ReadLine();  
       int pastryStringToNum = int.Parse(stringPastries);

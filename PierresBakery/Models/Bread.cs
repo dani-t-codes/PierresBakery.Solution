@@ -6,13 +6,22 @@ namespace PierresBakery.Models
   {
     // Auto-implemented properties
     public int NumOfLoaves { get; set; }
+    private static List<Bread> _loaves = new List<Bread> {};
 
     // Constructor
     public Bread(int numOfLoaves)
     {
       NumOfLoaves = numOfLoaves;
+      _loaves.Add(this);
     }
-
+    public static List<Bread> GetAll()
+    {
+      return _loaves;
+    }
+    public static void ClearAll()
+    {
+      _loaves.Clear();
+    }
     public int TotBreadLoavesCost(int numOfLoaves)
     {
       if (numOfLoaves != 1 && numOfLoaves != 2 && numOfLoaves != 3 && numOfLoaves % 3 == 0)
@@ -34,38 +43,6 @@ namespace PierresBakery.Models
       else
       {
         return 0; 
-      }
-    }
-  }
-
-  public class Pastry
-  {
-    // Auto-implemented properties
-    public int NumOfPastries { get; set; }
-
-    // Constructor
-    public Pastry(int numOfPastries)
-    {
-      NumOfPastries = numOfPastries;
-    }
-
-    public int TotPastryCost(int numOfPastries)
-    {
-      if (numOfPastries == 1 || numOfPastries == 2)
-      {
-        return 2 * (numOfPastries);
-      }
-      else if (numOfPastries > 3 && numOfPastries % 3 != 0)
-      {
-        return (2 * numOfPastries) - ((numOfPastries % 3));
-      }
-      else if (numOfPastries % 3 == 0)
-      {
-        return 5 * (numOfPastries / 3);
-      }
-      else
-      {
-        return numOfPastries * 2;        
       }
     }
   }
