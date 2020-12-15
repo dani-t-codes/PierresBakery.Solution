@@ -67,12 +67,6 @@ using System;
     }
 
     [TestMethod]
-    public static void ClearAll()
-    {
-      _pastries.Clear();
-    }
-
-    [TestMethod]
     public void TotPastryCost_NumberDivisibleByThreeCost_Fifteen()
     {
       int numOfPastries = 9;

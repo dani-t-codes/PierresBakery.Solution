@@ -24,7 +24,7 @@ public class Program
       string stringBreadLoaves = Console.ReadLine();
       int breadLoavesToNum = int.Parse(stringBreadLoaves);
       Bread newBread = new Bread(breadLoavesToNum);
-      Console.WriteLine(TotBreadLoavesCost(breadLoavesToNum));
+      Console.WriteLine(newBread.TotBreadLoavesCost(breadLoavesToNum));
       // create if/ else for numbers vs anything else
       try 
       {
@@ -47,7 +47,7 @@ public class Program
       string stringPastries = Console.ReadLine();  
       int pastryStringToNum = int.Parse(stringPastries);
       Pastry newPastry = new Pastry(pastryStringToNum);
-      Console.WriteLine(TotPastryCost(pastryStringToNum));
+      Console.WriteLine(newPastry.TotPastryCost(pastryStringToNum));
       // create if/ else for numbers vs anything else
       try 
       {

@@ -54,12 +54,6 @@ namespace PierresBakery.Tests
       List<Bread> result = Bread.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
-
-    [TestMethod]
-    public static void ClearAll()
-    {
-      _loaves.Clear();
-    }
     
     [TestMethod]
     public void TotBreadLoavesCost_NumGreaterThanThreeNotDivisibleByThreeCost_30()
