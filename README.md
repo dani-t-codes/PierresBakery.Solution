@@ -9,12 +9,12 @@
 This project is a C# console application made for a bakery and includes the following functionality:
 
 - One class for Bread and one for Pastry.
-- When the user runs the application, they receive a prompt with a welcome message, along with the cost for both Bread and Pastry.
-- A user can specify how many loaves of Bread and how many Pastries they'd like.
-- The total cost of the order is returned to the user.
+- When the user runs the application, they receive a prompt with a welcome message, along with the cost for both Bread and Pastries for individual items and for discounted bulk.
   Pierre offers the following deals:
     - Bread: Buy 2, get 1 free. A single loaf costs $5.
-    - Pastry: Buy 1 for \$2 or 3 for $5.
+    - Pastry: Buy 1 for \$2 or 3 for $5. 
+- A user can specify how many loaves of Bread or how many Pastries they'd like.
+- The total cost of the order is returned to the user. The discount price will automatically be applied to *every* 3rd loaf and *every* 3rd pastry when large orders are made.
 - All functionality for the models is tested.
 
 ## Technologies Used
@@ -32,27 +32,22 @@ If you already have the necessary technologies on your local system, the command
 
 #### Installing Git
 ###### For Mac Users
-
 - Access Terminal in your Finder, and open a new window. Install the package manager, (Homebrew) [https://brew.sh/], on your device by entering this line of code in Terminal: `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`.
 - Ensure Homebrew packages are run with this line of code: `echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bash_profile`.
 - Once homebrew is installed, install Git, a version control system for code writers, with this line of code `brew install git`.
 
 ###### For Windows Users
-
 - Open a new Command Prompt window by typing "Cmd" in your computer's search bar.
 - Determine whether you have 32-bit or 64-bit Windows by following these (instructions)[https://support.microsoft.com/en-us/help/13443/windows-which-version-am-i-running].
 - Go to (Git Bash)[https://gitforwindows.org/], click on the "Download" button, and download the corresponding exe file from the Git for Windows site._
 - Follow the instructions in the set up menu.
 
 #### For Both Mac & Windows systems
-
 - Once you have Git installed on your computer, go to this (GitHub repository)[https://github.com/dani-t-codes/PierresBakery.Solution], click the "Fork" button in the upper right hand corner of the page, and clone this application with the following command:`git clone https://github.com/dani-t-codes/PierresBakery.Solution.git`.
 
 
 #### Installing C#, .NET, dotnet script, & MySQL
-
 * Install C# and .Net according to your operating system below. 
-
 ###### For Mac
  * Download this .NET Core SDK (Software Development Kit)[https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-2.2.106-macos-x64-installer]. Clicking this link will prompt a .pkg file download from Microsoft.
 * Open the .pkg file. This will launch an installer which will walk you through installation steps. Use the default settings the installer suggests.

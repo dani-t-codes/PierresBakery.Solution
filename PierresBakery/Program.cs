@@ -4,7 +4,7 @@ using System;
 
 public class Program
 {
-  static void Main()
+  public static void Main()
   {
     Console.WriteLine("Welcome to Pierre's Bakery!");
     Console.WriteLine("--------------------------");
@@ -16,7 +16,7 @@ public class Program
     Console.WriteLine("What would you like to purchase today (Bread/Pastries/Exit)");
     string response = Console.ReadLine().ToLower();
 
-    if (response == "bread") 
+    if (response == "bread")
     {
       List<Bread> result = Bread.GetAll();
       Console.WriteLine("How many loaves of bread would you like to purchase? (e.g. 2)");
@@ -48,7 +48,7 @@ public class Program
       {
         Console.Write("I'm sorry, something went wrong.");
         Console.WriteLine("~~~~~~~~~");
-      } 
+      }
     Program.Main();
     }
     else if (response == "pastries")
@@ -83,7 +83,7 @@ public class Program
       {
         Console.Write("I'm sorry, something went wrong.");
         Console.WriteLine("~~~~~~~~~");
-      } 
+      }
       Program.Main();
     }
     else if (response == "exit")
