@@ -89,9 +89,11 @@ Once the project has been cloned to your computer and you have all the necessary
 
 ## Stretch Goals
 
-If I were to further build out this application in the console, I would code for the user to be able to enter integer values or numbers in word form and still return number of loaves/pastries and the cost in an integer format. I would confirm the user's total number of bread loaves or pastries before returning the cost with something like the following inside of the existing conditional statement in main for choosing bread/pastries/exit: 
+If I were to further build out this application in the console, I would code for the user to be able to enter integer values or numbers in word form and still return number of loaves/pastries and the cost in an integer format. The C# int.TryParse() method might come in handy, at least for a more elegant try/catch error handle until that functionality was built. 
 
-Pseudo-code: 
+I would confirm the user's total number of bread loaves or pastries before returning the cost with something like the following inside of the existing conditional statement in main for choosing bread/pastries/exit: 
+
+(Pseudo-code:) 
   string confirmNumPastries = Console.ReadLine().ToLower();
     if (confirmNumPastries == "yes")
       {
@@ -102,7 +104,7 @@ Pseudo-code:
         return Program.Main(); 
       }
 
-Additionally, in the above code, if the user said the number of pastries/bread loaves was not the amount they specified, the conditional would return them not to the beginning of the program, but to the beginning of the main conditional. 
+Additionally, in the above code, if the user said the number of pastries/bread loaves was not the amount they specified, the conditional would return them not to the beginning of the program, but to a new prompt asking ("What else can I get you") with a new branching conditional of purchase options. Anything new added would update the total purchase list and return both what the order purchases and the total cost of everything. 
 
 Finally, to increase sales at Pierre's Bakery, after a user had selected a number of pastries or bread loaves that were not the best sale price (i.e. any number not divisible by 3), the console would log to the user that they were X number of loaves/pastries away from that day's daily special price. The console would then ask the user if they want to add to their order the difference of loaves/pastries to get the free loaf or the extra pastry for cheaper. If the user agreed, the console would log the updated total price. 
 

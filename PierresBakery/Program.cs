@@ -8,7 +8,6 @@ public class Program
   {
     Console.WriteLine("Welcome to Pierre's Bakery!");
     Console.WriteLine("--------------------------");
-    Console.WriteLine("--------------------------");
     Console.WriteLine("Today's Daily Deals:");
     Console.WriteLine("--------------------------");
     Console.WriteLine("Bread: Buy 2, get 1 free. A single loaf costs $5.");
@@ -22,45 +21,69 @@ public class Program
       List<Bread> result = Bread.GetAll();
       Console.WriteLine("How many loaves of bread would you like to purchase? (e.g. 2)");
       string stringBreadLoaves = Console.ReadLine();
-      int breadLoavesToNum = int.Parse(stringBreadLoaves);
-      Bread newBread = new Bread(breadLoavesToNum);
-      Console.WriteLine(newBread.TotBreadLoavesCost(breadLoavesToNum));
-      // create if/ else for numbers vs anything else
-      try 
+      bool success = Int32.TryParse(stringBreadLoaves, out int number);
+      
+      if (success)
       {
-        int value = 1 / int.Parse("0"); // should value be breadLoavesToNum?
+        int breadLoavesToNum = int.Parse(stringBreadLoaves);
+        if (breadLoavesToNum % 3 == 0)
+        {
+          Bread newBread = new Bread(breadLoavesToNum);
+          Console.WriteLine(newBread.TotBreadLoavesCost(breadLoavesToNum));
+          Console.WriteLine("You got the best price on bread!");
+        }
+        else if (breadLoavesToNum % 3 != 0)
+        {
+          Bread newBread = new Bread(breadLoavesToNum);
+          Console.WriteLine(newBread.TotBreadLoavesCost(breadLoavesToNum));
+          Console.WriteLine("You should consider adding more loaves to your order to get a better deal.");
+        }
+        else
+        {
+          Console.Write("I'm sorry, something went wrong. Please try again.");
+          Console.WriteLine("~~~~~~~~~");
+        }
       }
-      catch (Exception ex)
+      else
       {
-        Console.WriteLine("Message = {0}", ex.Message);
-        Console.WriteLine("Source = {0}", ex.Source);
-        Console.WriteLine("StackTrace = {0}", ex.StackTrace);
-        Console.WriteLine("TargetSite = {0}", ex.TargetSite);
-      }
-
-      Program.Main();
+        Console.Write("I'm sorry, something went wrong.");
+        Console.WriteLine("~~~~~~~~~");
+      } 
+    Program.Main();
     }
     else if (response == "pastries")
     {
       List<Pastry> result = Pastry.GetAll();
       Console.WriteLine("How many pastries would you like to purchase? (e.g. 2)");
       string stringPastries = Console.ReadLine();  
-      int pastryStringToNum = int.Parse(stringPastries);
-      Pastry newPastry = new Pastry(pastryStringToNum);
-      Console.WriteLine(newPastry.TotPastryCost(pastryStringToNum));
-      // create if/ else for numbers vs anything else
-      try 
+      bool success = Int32.TryParse(stringPastries, out int number);
+      
+      if (success)
       {
-        int value = 1 / int.Parse("0"); // should value be pastryStringToNum? 
+        int pastryStringToNum = int.Parse(stringPastries);
+        if (pastryStringToNum % 3 == 0)
+        {
+          Pastry newPastry = new Pastry(pastryStringToNum);
+          Console.WriteLine(newPastry.TotPastryCost(pastryStringToNum));
+          Console.WriteLine("You got the best deal on pastries!");
+        }
+        else if (pastryStringToNum % 3 != 0)
+        {
+          Pastry newPastry = new Pastry(pastryStringToNum);
+          Console.WriteLine(newPastry.TotPastryCost(pastryStringToNum));
+          Console.WriteLine("You should consider adding more pastries to your order to get a better deal.");
+        }
+        else
+        {
+          Console.Write("I'm sorry, something went wrong.");
+          Console.WriteLine("~~~~~~~~~");
+        }
       }
-      catch (Exception ex)
+      else
       {
-        Console.WriteLine("Message = {0}", ex.Message);
-        Console.WriteLine("Source = {0}", ex.Source);
-        Console.WriteLine("StackTrace = {0}", ex.StackTrace);
-        Console.WriteLine("TargetSite = {0}", ex.TargetSite);
-      }
-
+        Console.Write("I'm sorry, something went wrong.");
+        Console.WriteLine("~~~~~~~~~");
+      } 
       Program.Main();
     }
     else if (response == "exit")
