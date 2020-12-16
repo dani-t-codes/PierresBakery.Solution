@@ -52,14 +52,14 @@ using System;
     }
 
     [TestMethod]
-    public void GetAll_ReturnsItems_ItemList()
+    public void GetAll_ReturnsPastries_PastryList()
     {
       //Arrange
       int pastries01 = 3;
       int pastries02 = 10;
       Pastry newPastry1 = new Pastry(pastries01);
       Pastry newPastry2 = new Pastry(pastries02);
-      List<Pastry> newList = new List<Pastry> { newPastry1, newPastry1 };
+      List<Pastry> newList = new List<Pastry> { newPastry1, newPastry2 };
       //Act
       List<Pastry> result = Pastry.GetAll();
       //Assert
