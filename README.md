@@ -105,7 +105,7 @@ Finally, to increase sales at Pierre's Bakery, after a user had selected a numbe
 
 ## Known bugs
 
-As of 12.13.2020, Program.cs is not accurately reading the methods within classes from Bread.cs. Auto-implemented properties have not been successfully deployed or tested yet.  
+No none bugs at this time. 
 
 ### Legal, or License
 
